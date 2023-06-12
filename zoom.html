@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<title>Zoom Info</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="style.css">
+
+
+
+<body onload="apparition()">
+
+    <div class="banner1">
+        <img src="imgSrc/banner2.jpg" alt="banner">
+    </div>
+
+
+<div class="welcomer">
+    <p>
+        | El Reino de Jesus |
+    </p>
+</div>
+<div class="welcomer2">
+    <p>
+        The Kingdom of Jesus
+    </p>
+</div>
+<div class="menu">
+    <a href="index.html">Home</a>
+    <a href="aboutUs.html">About Us</a>
+    <a href="meeting.html">Meeting Schedule</a>
+    <a href="zoom.html">Zoom Schedule</a>
+    <a href="contact.html">Contact Us</a>
+    <a href="donations.html">Donations</a>
+</div>
+
+<div class="lord1">
+    <img src="imgSrc/lord2.png" height="500px" width="auto" id="test">
+</div>
+
+
+<script>
+    async function apparition(){
+      
+        var element = document.getElementById("test");
+        var elemBody = document.getElementById("bodyer");
+        var elemBodyEs = document.getElementById("bodyerEs");
+        elemBody.style.opacity = 0;
+        elemBodyEs.style.opacity = 0;
+        var counter = 1;
+        while(element.style.opacity < 1){
+            element.style.opacity = counter;
+         await new Promise(resolve => setTimeout(resolve, 30));
+         counter = counter + 0.02;
+        }
+        
+        var bodyCounter = 0;
+        while(elemBody.style.opacity<1){
+            elemBody.style.opacity = bodyCounter;
+            elemBodyEs.style.opacity = bodyCounter;
+            await new Promise(resolve => setTimeout(resolve,30));
+            bodyCounter = bodyCounter + 0.01;
+        }
+
+
+    }
+</script>
+
+
+<div class="currQuote" id="bodyer">
+    <p>
+        <strong>Zoom Meeting Schedule <br> Juntas por Zoom</strong><br>
+        <iframe src="https://calendar.google.com/calendar/embed?src=31663df477f627dcf63a2771299cda802a70bcfa5c764ce2706185845a53b498%40group.calendar.google.com&ctz=America%2FLos_Angeles" 
+    style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+</div>
+
+<div class="currQuoteEs" id="bodyerEs">
+    <p>
+       
+    </p>
+</div>
+
+
+
+
+
+<div class="logos">
+    <img src="imgSrc/external1.png" height="50px" width="auto">
+    <img src="imgSrc/external2.png" height="50px" width="auto">
+    
+</div>
+
+
+
+
+
+
+</body>
+</html>
